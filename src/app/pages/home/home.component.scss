@@ -1,0 +1,23 @@
+section {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 35px;
+  opacity: 1;
+  img {
+    width: 100%;
+    &:hover {
+      opacity: 0.8;
+      transition: opacity 0.3;
+    }
+  }
+}
+
+.gr-home {
+  padding: 20px;
+  width: 700px;
+  margin: 0 auto;
+
+  border: 10px solid #fdb498;
+  background-color: white;
+}

@@ -1,0 +1,66 @@
+<h2>Creación/edición de productos</h2>
+<div class="rrow">
+  <div class="dGestion">
+    <form (ngSubmit)="onSubmit()" [formGroup]="gestionForm">
+      <div>
+        <label for="name">Nombre de Producto</label>
+      </div>
+      <div>
+        <input
+          class="input"
+          type="text"
+          placeholder="...nombre del producto"
+          formControlName="name"
+        />
+      </div>
+
+      <app-form-errors
+        *ngIf="submmited"
+        [errors]="gestionForm.controls['name'].errors"
+      ></app-form-errors>
+
+      <div>
+        <label for="image">Subir imagen</label>
+      </div>
+      <div>
+        <input
+          class="input"
+          formControlName="image"
+          id="img"
+          name="img"
+          type="text"
+        />
+      </div>
+      <app-form-errors
+        *ngIf="submmited"
+        [errors]="gestionForm.controls['image'].errors"
+      ></app-form-errors>
+      <div>
+        <label for="origin">Origen</label>
+      </div>
+      <div>
+        <input
+          class="input"
+          type="text"
+          formControlName="origin"
+          placeholder="...origen"
+        />
+      </div>
+      <div class="center">
+        <button class="center__item" type="submit">Guardar</button>
+        <input
+          class="center__item"
+          type="reset"
+          ng-click="reset(gestionForm)"
+          value="Limpiar"
+        />
+        <button class="center__item" (click)="onGoBack()">Back</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<app-flower-card
+  *ngIf="createdFlower"
+  [flower]="createdFlower"
+></app-flower-card>

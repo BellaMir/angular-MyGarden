@@ -1,0 +1,6 @@
+  <app-flower-card [flower]="flower"></app-flower-card>
+<article class="center">
+  <button class="center__item" (click)="onUpdate(flower)">Editar</button>
+  <button class="center__item" (click)="onDelete()" routerLink="/flowers">Eliminar</button>
+  <button class="center__item" (click)="onGoBack()">Back</button>
+</article>

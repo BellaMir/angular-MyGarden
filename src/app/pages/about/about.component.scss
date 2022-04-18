@@ -1,0 +1,52 @@
+.dGestion {
+  margin-top: 20px;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  //justify-content: space-around;
+  margin: 0 auto;
+  div {
+    margin-bottom: 2px;
+    font-size: 25px;
+  }
+}
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+form {
+  box-shadow: 2px 3px 3px grey;
+  padding: 50px;
+  gap: 50px;
+}
+.input {
+  height: 20px;
+  font-size: 15px;
+}
+.rrow {
+  display: flex;
+ flex-direction: block;
+  //align-items: center;
+}
+
+.center{
+  width: 200px;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 25px;
+  &__item{
+   padding: 5px;
+   margin: 2px;
+   font-weight: bold;
+   background-color:#fdb498 ;
+   font-size: 13px;
+  }
+}
+input.center__item{
+  font-family: 'Pacifico', cursive;
+
+}
+

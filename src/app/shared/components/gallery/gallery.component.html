@@ -1,0 +1,25 @@
+<section class="section">
+  <article class="pTitle">
+    <h2>Listado de Flores</h2>
+    <input
+      placeholder="Buscar.."
+      [(ngModel)]="filterpost"
+      name="filterpost"
+      type="text"
+    />
+
+  </article>
+  <article class="gallery">
+    <figure
+      class="gallery__item"
+      *ngFor="let flower of flowers | search: filterpost"
+      routerLink="/flowers/{{ flower._id }}"
+    >
+      <img src="{{ flower.image }}" />
+      <h2>{{ flower.name }}</h2>
+      <h3>{{ flower.origin }}</h3>
+
+    </figure>
+
+  </article>
+</section>
